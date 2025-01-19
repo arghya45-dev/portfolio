@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Arghya Portfolio</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+                Arghya <span>Chakraborty</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="#">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#skills">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#certifications">Certifications</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="#portfolio">Portfolio</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="#contact">Contact</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="#">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+    <section id="hero">
+        <div class="main-container">
+            <div class="image" data-aos="zoom-out" data-aos-duration="3000">
+                <img src="./images/arghya.jpg" alt="">
+            </div>
+            <div class="content">
+                <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">Hey I'm <span>Arghya</span></h1>
+                <div class="typewriter" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">I'm a <span class="typewriter-text">Developer</span><label>|</label></div>
+                <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">I am Arghya Chakraborty, a dedicated B.Tech student specializing in Computer Science from West Bengal. I have a strong passion for technology and problem-solving, which drives me to continuously enhance my skills in programming and explore emerging technologies. My goal is to contribute meaningfully to the field of Computer Science by developing innovative and impactful solutions. I am committed to personal growth and eager to embrace opportunities that allow me to make a difference in the tech world.</p>
+                <div class="social-links">
+                    <a href="https://github.com/arghya45-dev" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.facebook.com/arghya.chakraborty.7169" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/in/arghya-chakraborty-61b151276" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1600"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <div class="btn" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="1800">
+                    <button>Hire me</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+    
+    <!-- New Sections -->
+    <section id="portfolio" class="section">
+        <div class="container" data-aos="fade-up" data-aos-duration="1500">
+            <h2>Portfolio</h2>
+            <p>Check out some of my recent projects!</p>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-aos="zoom-in" data-aos-duration="1000">
+                    <img src="./images/todo.jpg" alt="Project 1">
+                    <h3>ToDo List</h3>
+                </div>
+                <div class="portfolio-item" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+                    <img src="./images/blog.jpg" alt="Project 2">
+                    <h3>Portfolio</h3>
+                </div>
+                <div class="portfolio-item" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
+                    <img src="./images/musicplayer.jpg" alt="Project 3">
+                    <h3>Spotify Clone</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- skill Sections -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 data-aos="fade-up" data-aos-duration="1500">Skills</h2>
+            <p data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">Here are some of the technologies I am skilled in.</p>
+            <div class="skills-container">
+                <div class="skill">
+                    <h3>HTML & CSS</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress html" data-progress="90%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h3>JavaScript</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress javascript" data-progress="85%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h3>React</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress react" data-progress="80%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h3>Node.js</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress nodejs" data-progress="75%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h3>Python</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress python" data-progress="70%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Online Certifications Section -->
+<section id="certifications" class="section">
+    <div class="container">
+        <h2>Online Certifications</h2>
+        <ul class="certifications-list">
+            <li class="certification-item">
+                <div class="certification-content">
+                    <h3>Web Development - Coursera</h3>
+                    <p>Learned full-stack web development concepts, including HTML, CSS, JavaScript, and frameworks like React and Node.js.</p>
+                </div>
+            </li>
+            <li class="certification-item">
+                <div class="certification-content">
+                    <h3>AI and Machine Learning - edX</h3>
+                    <p>Explored concepts in Artificial Intelligence, machine learning algorithms, and deep learning with TensorFlow.</p>
+                </div>
+            </li>
+            <li class="certification-item">
+                <div class="certification-content">
+                    <h3>Data Science with Python - Udemy</h3>
+                    <p>Focused on data analysis, visualization, and machine learning using Python libraries such as pandas, numpy, and scikit-learn.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+    
+    
+
+    <section id="contact" class="section">
+        <div class="container" data-aos="fade-up" data-aos-duration="1500">
+            <h2>Contact Me</h2>
+            <form action="#">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({offset:0});
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
