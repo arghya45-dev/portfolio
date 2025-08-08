@@ -1,173 +1,298 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark"> <!-- Default to dark mode -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arghya Chakraborty | Developer Portfolio</title>
+    
+    <!-- Meta Tags for Social Sharing -->
+    <meta name="description" content="The professional portfolio for Arghya Chakraborty, a developer and tech enthusiast.">
+    <meta property="og:title" content="Arghya Chakraborty | Portfolio">
+    <meta property="og:description" content="Check out my projects, skills, and get in touch.">
+    <meta property="og:image" content="https://placehold.co/1200x630/001f3f/FFFFFF?text=Arghya's+Portfolio">
+    <meta property="og:url" content="https://your-live-url.com"> <!-- TODO: Replace with your live URL -->
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="https://placehold.co/32x32/007bff/FFFFFF?text=AC">
+
+    <!-- Tailwind CSS for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <!-- AOS (Animate on Scroll) Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
     <link rel="stylesheet" href="style.css">
-    <title>Arghya Portfolio</title>
 </head>
-<body>
-    <nav>
-        <div class="nav-container">
-            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
-                Arghya <span>Chakraborty</span>
+<body class="antialiased">
+    <!-- JS Libraries -->
+    <script src="https://www.goat1000.com/tagcanvas.min.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Dynamic Navigation Bar -->
+    <nav id="main-nav">
+        <div id="nav-container" class="flex items-center justify-between mx-auto">
+            <a href="#" class="text-2xl font-bold" style="color: var(--primary-color);">AC.</a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#hero" class="hover:text-blue-400 transition-colors">Home</a>
+                <a href="#about" class="hover:text-blue-400 transition-colors">About</a>
+                <a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a>
+                <a href="#skills" class="hover:text-blue-400 transition-colors">Skills</a>
+                <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
             </div>
-            <div class="links">
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="#">Home</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#skills">Skills</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#certifications">Certifications</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="#portfolio">Portfolio</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="#contact">Contact</a></div>
-            </div>
-            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
-        </div>
-        <div class="dropdown">
-            <div class="links">
-                <a href="#">Home</a>
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#portfolio">Portfolio</a>
-                <a href="#contact">Contact</a>
-                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            <div class="flex items-center space-x-4">
+                <a href="./assets/resume/Arghya Chakraborty Resume.pdf" download="ArghyaChakraborty_Resume.pdf" class="hidden md:inline-block bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-600 transition-colors">
+                    Download CV
+                </a>
+                <!-- Theme Toggle -->
+                <button id="theme-toggle" class="p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" aria-label="Toggle theme">
+                    <i class="fas fa-sun text-xl text-yellow-400 hidden"></i>
+                    <i class="fas fa-moon text-xl text-slate-400"></i>
+                </button>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-full focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
             </div>
         </div>
     </nav>
-    <section id="hero">
-        <div class="main-container">
-            <div class="image" data-aos="zoom-out" data-aos-duration="3000">
-                <img src="./images/arghya.jpg" alt="">
-            </div>
-            <div class="content">
-                <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">Hey I'm <span>Arghya</span></h1>
-                <div class="typewriter" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">I'm a <span class="typewriter-text">Developer</span><label>|</label></div>
-                <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">I am Arghya Chakraborty, a dedicated B.Tech student specializing in Computer Science from West Bengal. I have a strong passion for technology and problem-solving, which drives me to continuously enhance my skills in programming and explore emerging technologies. My goal is to contribute meaningfully to the field of Computer Science by developing innovative and impactful solutions. I am committed to personal growth and eager to embrace opportunities that allow me to make a difference in the tech world.</p>
-                <div class="social-links">
-                    <a href="https://github.com/arghya45-dev" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.facebook.com/arghya.chakraborty.7169" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://www.linkedin.com/in/arghya-chakraborty-61b151276" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1600"><i class="fa-brands fa-twitter"></i></a>
-                </div>
-                <div class="btn" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="1800">
-                    <button>Hire me</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
     
-    
-    <!-- New Sections -->
-    <section id="portfolio" class="section">
-        <div class="container" data-aos="fade-up" data-aos-duration="1500">
-            <h2>Portfolio</h2>
-            <p>Check out some of my recent projects!</p>
-            <div class="portfolio-grid">
-                <div class="portfolio-item" data-aos="zoom-in" data-aos-duration="1000">
-                    <img src="./images/todo.jpg" alt="Project 1">
-                    <h3>VOXIS-AI Assistant</h3>
-                </div>
-                <div class="portfolio-item" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
-                    <img src="./images/blog.jpg" alt="Project 2">
-                    <h3>AI One Stop</h3>
-                </div>
-                <div class="portfolio-item" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
-                    <img src="./images/musicplayer.jpg" alt="Project 3">
-                    <h3>Spotify Clone</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- skill Sections -->
-    <section id="skills" class="section">
-        <div class="container">
-            <h2 data-aos="fade-up" data-aos-duration="1500">Skills</h2>
-            <p data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">Here are some of the technologies I am skilled in.</p>
-            <div class="skills-container">
-                <div class="skill">
-                    <h3>HTML & CSS</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress html" data-progress="90%"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <h3>JavaScript</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress javascript" data-progress="85%"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <h3>React</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress react" data-progress="80%"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <h3>Node.js</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress nodejs" data-progress="75%"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <h3>Python</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress python" data-progress="70%"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Online Certifications Section -->
-<section id="certifications" class="section">
-    <div class="container">
-        <h2>Online Certifications</h2>
-        <ul class="certifications-list">
-            <li class="certification-item">
-                <div class="certification-content">
-                    <h3>Web Development - Coursera</h3>
-                    <p>Learned full-stack web development concepts, including HTML, CSS, JavaScript, and frameworks like React and Node.js.</p>
-                </div>
-            </li>
-            <li class="certification-item">
-                <div class="certification-content">
-                    <h3>AI and Machine Learning - edX</h3>
-                    <p>Explored concepts in Artificial Intelligence, machine learning algorithms, and deep learning with TensorFlow.</p>
-                </div>
-            </li>
-            <li class="certification-item">
-                <div class="certification-content">
-                    <h3>Data Science with Python - Udemy</h3>
-                    <p>Focused on data analysis, visualization, and machine learning using Python libraries such as pandas, numpy, and scikit-learn.</p>
-                </div>
-            </li>
-        </ul>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-50 hidden flex-col items-center justify-center space-y-8 text-2xl">
+        <button id="close-mobile-menu-btn" class="absolute top-8 right-8 text-3xl">&times;</button>
+        <a href="#hero" class="mobile-link">Home</a>
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#projects" class="mobile-link">Projects</a>
+        <a href="#skills" class="mobile-link">Skills</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+        <a href="./assets/resume/Arghya Chakraborty Resume.pdf" download="ArghyaChakraborty_Resume.pdf" class="bg-blue-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-600 transition-colors mt-4">
+            Download CV
+        </a>
     </div>
-</section>
 
-    
-    
 
-    <section id="contact" class="section">
-        <div class="container" data-aos="fade-up" data-aos-duration="1500">
-            <h2>Contact Me</h2>
-            <form action="#">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-screen flex items-center justify-center text-center px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="relative mx-auto mb-6 w-40 h-40" data-aos="zoom-in">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur-xl opacity-75 animate-pulse"></div>
+                    <img src="./assets/images/arghya.jpg" alt="Arghya Chakraborty" class="relative w-full h-full rounded-full border-4 shadow-lg" style="border-color: var(--primary-color);">
+                </div>
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-4" data-aos="fade-up">Hey, I'm Arghya Chakraborty</h1>
+                <p class="text-lg sm:text-xl md:text-2xl mb-8 h-8 md:h-14" style="color: var(--text-color);" data-aos="fade-up" data-aos-delay="200">
+                    I build <span id="typewriter-text" class="font-semibold" style="color: var(--primary-color);"></span><span id="cursor" style="color: var(--primary-color);">|</span>
+                </p>
+                <div class="flex justify-center items-center space-x-6" data-aos="fade-up" data-aos-delay="400">
+                    <a href="https://github.com/arghya45-dev" target="_blank" class="text-3xl hover:scale-110 transition-transform" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/arghya-chakraborty-61b151276" target="_blank" class="text-3xl hover:scale-110 transition-transform" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://x.com/Arghya__007" target="_blank" class="text-3xl hover:scale-110 transition-transform" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-20 px-4">
+            <div class="container mx-auto max-w-4xl text-center">
+                <h2 class="text-4xl font-bold mb-6" data-aos="fade-up">About Me</h2>
+                <p class="text-lg md:text-xl leading-relaxed" style="color: var(--text-color);" data-aos="fade-up" data-aos-delay="200">
+                    I am a passionate and driven B.Tech student specializing in Computer Science, with a deep-seated love for technology and creative problem-solving. My journey in tech is fueled by a desire to build innovative solutions that are not only functional but also provide a great user experience. Outside of coding, I enjoy exploring new technologies, contributing to open-source projects, and collaborating with others to bring ideas to life.
+                </p>
+            </div>
+        </section>
+
+        <!-- Experience & Education Timeline Section -->
+        <section id="experience" class="py-20 px-4" style="background-color: var(--card-color);">
+            <div class="container mx-auto max-w-4xl">
+                <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">My Journey</h2>
+                <div class="relative">
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-item ml-4 sm:ml-6 pl-6 sm:pl-8 pb-12" data-aos="fade-up">
+                        <h3 class="text-xl sm:text-2xl font-bold">B.Tech in Computer Science</h3>
+                        <p class="text-md font-semibold" style="color: var(--primary-color);">Guru Nanak Institute of Technology | West Bengal</p>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">2023 - 2027 (Expected)</p>
+                        <p class="mt-2" style="color: var(--text-color);">Focused on core computer science fundamentals, including data structures, algorithms, and software development principles. Engaged in various projects to apply theoretical knowledge to practical problems.</p>
+                    </div>
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-item ml-4 sm:ml-6 pl-6 sm:pl-8 pb-12" data-aos="fade-up">
+                        <h3 class="text-xl sm:text-2xl font-bold">Participant</h3>
+                        <p class="text-md font-semibold" style="color: var(--primary-color);">Smart India Hackathon</p>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Summer 2024</p>
+                        <p class="mt-2" style="color: var(--text-color);">Contributed to the development of a Learning Management System using React and Node.js. Collaborated with a team of developer friends to implement new features and fix bugs, gaining hands-on experience in an Agile environment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 px-4">
+            <div class="container mx-auto max-w-6xl">
+                <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">My Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <div class="project-card rounded-lg overflow-hidden shadow-xl transform hover:-translate-y-2 transition-transform duration-300" style="background-color: var(--card-color);" data-aos="fade-up">
+                        <div class="relative">
+                            <img src="./assets/images/voxis1.png" alt="Project 1 Thumbnail" class="w-full h-48 object-cover">
+                            <div class="project-overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
+                                <button class="open-modal-btn text-white bg-blue-500 py-2 px-4 rounded-full font-semibold" data-video-src="./assets/video/voxis.mp4">
+                                    <i class="fas fa-play mr-2"></i>Watch Demo
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2">VOXIS-AI Assistant</h3>
+                            <p class="mb-4" style="color: var(--text-color);">A voice-controlled AI assistant built to streamline tasks and provide information on the fly.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-200 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Python</span>
+                                <span class="bg-gray-200 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Django</span>
+                                <span class="bg-gray-200 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Groq</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card rounded-lg overflow-hidden shadow-xl transform hover:-translate-y-2 transition-transform duration-300" style="background-color: var(--card-color);" data-aos="fade-up" data-aos-delay="200">
+                        <div class="relative">
+                            <img src="./assets/images/sundown.png" alt="Project 2 Thumbnail" class="w-full h-48 object-cover">
+                            <div class="project-overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
+                                <button class="open-modal-btn text-white bg-blue-500 py-2 px-4 rounded-full font-semibold" data-video-src="./assets/video/sundown.mp4">
+                                    <i class="fas fa-play mr-2"></i>Watch Demo
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2">Sundown</h3>
+                            <p class="mb-4" style="color: var(--text-color);">A Morden animated landing page.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-green-200 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">React</span>
+                                <span class="bg-yellow-200 text-yellow-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">HTML5/CSS3</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card rounded-lg overflow-hidden shadow-xl transform hover:-translate-y-2 transition-transform duration-300" style="background-color: var(--card-color);" data-aos="fade-up" data-aos-delay="400">
+                        <div class="relative">
+                            <img src="./assets/images/ice-cream.png" alt="Project 3 Thumbnail" class="w-full h-48 object-cover">
+                            <div class="project-overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
+                                <button class="open-modal-btn text-white bg-blue-500 py-2 px-4 rounded-full font-semibold" data-video-src="./assets/video/iceream.mp4">
+                                    <i class="fas fa-play mr-2"></i>Watch Demo
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2">Ecommmerce</h3>
+                            <p class="mb-4" style="color: var(--text-color);">A web-based Ecommerce platform of Ice Creams provide cart , order functionalities.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-red-200 text-red-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Django</span>
+                                <span class="bg-purple-200 text-purple-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">JavaScript</span>
+                                <span class="bg-red-200 text-red-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">HTML5/CSS3</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 px-4" style="background-color: var(--card-color);">
+            <div class="container mx-auto max-w-5xl text-center">
+                <h2 class="text-4xl font-bold mb-4" data-aos="fade-up">Technologies I Use</h2>
+                <div id="skills-canvas-container" class="w-full flex justify-center items-center h-80 md:h-[450px]" data-aos="fade-up">
+                    <canvas id="skills-canvas">
+                        <p>In case of browsers that do not support the canvas element, this text will be displayed.</p>
+                    </canvas>
+                </div>
+                <div id="tags" class="hidden">
+                    <ul>
+                        <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg" width="40" height="40" alt="HTML5"></a></li>
+                        <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg" width="40" height="40" alt="CSS3"></a></li>
+                        <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" width="40" height="40" alt="JavaScript"></a></li>
+                        <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg" width="40" height="40" alt="TypeScript"></a></li>
+                        <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40" height="40" alt="React"></a></li>
+                        <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" width="40" height="40" alt="Next.js"></a></li>
+                        <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain.svg" width="40" height="40" alt="Node.js"></a></li>
+                        <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-plain.svg" width="40" height="40" alt="Python"></a></li>
+                        <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-plain.svg" width="40" height="40" alt="Java"></a></li>
+                        <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-plain.svg" width="40" height="40" alt="C++"></a></li>
+                        <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-plain.svg" width="40" height="40" alt="Git"></a></li>
+                        <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="40" height="40" alt="GitHub"></a></li>
+                        <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" width="40" height="40" alt="Tailwind CSS"></a></li>
+                        <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" width="40" height="40" alt="Sass"></a></li>
+                        <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg" width="40" height="40" alt="Bootstrap"></a></li>
+                        <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" width="40" height="40" alt="Firebase"></a></li>
+                        <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain.svg" width="40" height="40" alt="MongoDB"></a></li>
+                        <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-plain.svg" width="40" height="40" alt="PostgreSQL"></a></li>
+                        <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg" width="40" height="40" alt="GraphQL"></a></li>
+                        <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-plain.svg" width="40" height="40" alt="Docker"></a></li>
+                        <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" width="40" height="40" alt="AWS"></a></li>
+                        <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" width="40" height="40" alt="Figma"></a></li>
+                        <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" width="40" height="40" alt="Linux"></a></li>
+                        <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" width="40" height="40" alt="VS Code"></a></li>
+                        <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" width="40" height="40" alt="Vite"></a></li>
+                        <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-plain.svg" width="40" height="40" alt="Webpack"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 px-4">
+            <div class="container mx-auto max-w-2xl text-center" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">Get In Touch</h2>
+                <p class="mb-8" style="color: var(--text-color);">Have a question or want to work together? Feel free to reach out!</p>
+                <form id="contact-form" action="https://formspree.io/f/YOUR_UNIQUE_ID" method="POST" class="w-full max-w-lg mx-auto text-left">
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                            <label class="block uppercase tracking-wide text-xs font-bold mb-2" for="grid-first-name">Name</label>
+                            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" name="name" placeholder="Jane Doe" required>
+                        </div>
+                        <div class="w-full md:w-1/2 px-3">
+                            <label class="block uppercase tracking-wide text-xs font-bold mb-2" for="grid-email">Email</label>
+                            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-email" type="email" name="email" placeholder="jane.doe@example.com" required>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                        <div class="w-full px-3">
+                            <label class="block uppercase tracking-wide text-xs font-bold mb-2" for="grid-message">Message</label>
+                            <textarea class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-message" name="message" rows="5" placeholder="Your message here..." required></textarea>
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <button class="shadow bg-blue-500 hover:bg-blue-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-6 rounded" type="submit">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+                <p id="form-status" class="mt-4 text-lg font-semibold"></p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-6 text-center" style="background-color: var(--card-color);">
+        <p>&copy; <span id="year"></span> Arghya Chakraborty. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Video Modal -->
+    <div id="video-modal" class="fixed inset-0 z-[200] hidden items-center justify-center p-4">
+        <div class="relative w-full max-w-3xl bg-black rounded-lg shadow-lg">
+            <button id="close-modal-btn" class="absolute -top-2 -right-2 text-white bg-red-600 rounded-full h-8 w-8 flex items-center justify-center">&times;</button>
+            <div class="aspect-w-16 aspect-h-9">
+                <video id="modal-video" class="w-full h-full" controls autoplay>
+                </video>
+            </div>
         </div>
-    </section>
+    </div>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init({offset:0});
-    </script>
     <script src="script.js"></script>
 </body>
 </html>
